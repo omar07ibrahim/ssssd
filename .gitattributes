@@ -1,0 +1,4 @@
+# Never render local environment contents in text diffs.
+.env -diff
+.env.* -diff
+.env.example diff
