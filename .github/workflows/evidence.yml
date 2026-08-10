@@ -1,0 +1,61 @@
+name: Quarantine source evidence
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ssssd-source-evidence-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  evidence:
+    name: Quarantine source audit
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Check out exact revision
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 1
+          persist-credentials: false
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - name: Set up exact audit runtime
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6.3.0
+        with:
+          python-version: "3.14.6"
+      - name: Build the privacy-preserving candidate
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(python --version)" = "Python 3.14.6"
+          python tools/audit_quarantine.py --write-candidate
+          test "$(find build/quarantine-evidence -maxdepth 1 -type f | wc -l)" -eq 7
+      - name: Upload exact candidate for review
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: ssssd-quarantine-evidence-${{ github.run_id }}
+          path: build/quarantine-evidence/
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 9
+      - name: Verify committed evidence and clean checkout
+        shell: bash
+        run: |
+          set -euo pipefail
+          if test -f docs/evidence/source-audit.json; then
+            python tools/audit_quarantine.py --check
+            for name in source-audit.json source-audit.txt source-inventory.svg module-boundary.svg runtime-boundary.svg credential-boundary.svg release-gate.svg; do
+              cmp "build/quarantine-evidence/$name" "docs/evidence/$name"
+            done
+          else
+            echo "Candidate-only bootstrap: evidence will be adopted in a separate reviewable commit."
+          fi
+          rm -rf build/quarantine-evidence
+          rmdir build 2>/dev/null || true
+          git diff --check
+          test -z "$(git status --porcelain=v1 --untracked-files=all)"
