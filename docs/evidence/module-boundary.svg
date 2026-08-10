@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+<title id="title">Static module boundary map</title>
+<desc id="desc">Source-derived grouping of native wrappers, capture, processing, state, presentation, and optional messaging modules.</desc>
+<style>
+  .bg { fill: #07111f; }
+  .panel { fill: #0f2035; stroke: #315270; stroke-width: 2; }
+  .panel2 { fill: #122941; stroke: #41698c; stroke-width: 2; }
+  .title { fill: #f4f8ff; font: 700 34px ui-monospace, SFMono-Regular, Consolas, monospace; }
+  .sub { fill: #9ec8e8; font: 18px ui-monospace, SFMono-Regular, Consolas, monospace; }
+  .head { fill: #f4f8ff; font: 700 21px ui-monospace, SFMono-Regular, Consolas, monospace; }
+  .body { fill: #d4e5f4; font: 17px ui-monospace, SFMono-Regular, Consolas, monospace; }
+  .small { fill: #9ec8e8; font: 15px ui-monospace, SFMono-Regular, Consolas, monospace; }
+  .good { fill: #65d6a6; font: 700 17px ui-monospace, SFMono-Regular, Consolas, monospace; }
+  .warn { fill: #ffcc66; font: 700 17px ui-monospace, SFMono-Regular, Consolas, monospace; }
+  .bad { fill: #ff7b86; font: 700 17px ui-monospace, SFMono-Regular, Consolas, monospace; }
+  .line { stroke: #77b6dd; stroke-width: 3; fill: none; }
+</style>
+<rect class="bg" width="1280" height="720"/>
+<text x="60" y="62" class="title" text-anchor="start">SSSSD / MODULE BOUNDARIES</text>
+<text x="60" y="94" class="sub" text-anchor="start">Groups are derived from exact retained modules and local imports; no runtime claim.</text>
+<rect x="60" y="145" width="340" height="185" rx="18" class="panel2"/>
+<text x="84" y="187" class="head" text-anchor="start">NATIVE-WRAPPER</text>
+<text x="84" y="223" class="small" text-anchor="start">2 files · 1,229 lines</text>
+<text x="84" y="261" class="body" text-anchor="start">DTKLPR5</text>
+<text x="84" y="289" class="body" text-anchor="start">DTKVID</text>
+<rect x="450" y="145" width="340" height="185" rx="18" class="panel2"/>
+<text x="474" y="187" class="head" text-anchor="start">CAPTURE</text>
+<text x="474" y="223" class="small" text-anchor="start">3 files · 1,009 lines</text>
+<text x="474" y="261" class="body" text-anchor="start">auto_virtual_camera</text>
+<text x="474" y="289" class="body" text-anchor="start">camera_handler</text>
+<text x="474" y="317" class="body" text-anchor="start">virtual_camera_manager</text>
+<rect x="840" y="145" width="340" height="185" rx="18" class="panel2"/>
+<text x="864" y="187" class="head" text-anchor="start">PROCESSING</text>
+<text x="864" y="223" class="small" text-anchor="start">2 files · 824 lines</text>
+<text x="864" y="261" class="body" text-anchor="start">improved_levenshtein</text>
+<text x="864" y="289" class="body" text-anchor="start">plate_processor</text>
+<rect x="60" y="390" width="340" height="185" rx="18" class="panel2"/>
+<text x="84" y="432" class="head" text-anchor="start">STATE</text>
+<text x="84" y="468" class="small" text-anchor="start">3 files · 1,564 lines</text>
+<text x="84" y="506" class="body" text-anchor="start">config</text>
+<text x="84" y="534" class="body" text-anchor="start">database</text>
+<text x="84" y="562" class="body" text-anchor="start">utils</text>
+<rect x="450" y="390" width="340" height="185" rx="18" class="panel2"/>
+<text x="474" y="432" class="head" text-anchor="start">PRESENTATION</text>
+<text x="474" y="468" class="small" text-anchor="start">3 files · 2,586 lines</text>
+<text x="474" y="506" class="body" text-anchor="start">gui</text>
+<text x="474" y="534" class="body" text-anchor="start">main</text>
+<text x="474" y="562" class="body" text-anchor="start">workers</text>
+<rect x="840" y="390" width="340" height="185" rx="18" class="panel2"/>
+<text x="864" y="432" class="head" text-anchor="start">OPTIONAL-MESSAGING</text>
+<text x="864" y="468" class="small" text-anchor="start">2 files · 797 lines</text>
+<text x="864" y="506" class="body" text-anchor="start">telegram_notifier</text>
+<text x="864" y="534" class="body" text-anchor="start">telegram_stream_manager</text>
+<text x="640" y="650" class="good" text-anchor="middle">27 LOCAL IMPORT EDGES · ZERO IMPORTS EXECUTED</text>
+</svg>

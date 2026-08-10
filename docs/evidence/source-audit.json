@@ -1,0 +1,688 @@
+{
+  "environment_template": {
+    "bytes": 163,
+    "entries": 8,
+    "git_blob_sha1": "7899c5b1b1e38c03d83f4f53e23917ad6eee2cca",
+    "keys": [
+      "DATABASE_PATH",
+      "LIB_PATH",
+      "TELEGRAM_BOT_TOKEN",
+      "TELEGRAM_CHAT_ID",
+      "TELEGRAM_STREAM_API_HASH",
+      "TELEGRAM_STREAM_API_ID",
+      "TELEGRAM_STREAM_CHAT_ID",
+      "TELEGRAM_STREAM_SESSION"
+    ],
+    "nonempty_values": 0,
+    "path": ".env.example",
+    "sha256": "96a8bed1c9c4f012fac54b75e7140eab6ef2866796afe73c809d6b1186190548",
+    "values_emitted": false
+  },
+  "generated_artifacts": [
+    "source-audit.json",
+    "source-audit.txt",
+    "source-inventory.svg",
+    "module-boundary.svg",
+    "runtime-boundary.svg",
+    "credential-boundary.svg",
+    "release-gate.svg"
+  ],
+  "generator": {
+    "path": "tools/audit_quarantine.py",
+    "sha256": "5b79ea30f9bf5effd43ecc587ab92a085164e2820ea936ff5066850b72a7bfac"
+  },
+  "python": {
+    "layers": [
+      {
+        "files": 2,
+        "id": "native-wrapper",
+        "lines": 1229,
+        "modules": [
+          "DTKLPR5",
+          "DTKVID"
+        ]
+      },
+      {
+        "files": 3,
+        "id": "capture",
+        "lines": 1009,
+        "modules": [
+          "auto_virtual_camera",
+          "camera_handler",
+          "virtual_camera_manager"
+        ]
+      },
+      {
+        "files": 2,
+        "id": "processing",
+        "lines": 824,
+        "modules": [
+          "improved_levenshtein",
+          "plate_processor"
+        ]
+      },
+      {
+        "files": 3,
+        "id": "state",
+        "lines": 1564,
+        "modules": [
+          "config",
+          "database",
+          "utils"
+        ]
+      },
+      {
+        "files": 3,
+        "id": "presentation",
+        "lines": 2586,
+        "modules": [
+          "gui",
+          "main",
+          "workers"
+        ]
+      },
+      {
+        "files": 2,
+        "id": "optional-messaging",
+        "lines": 797,
+        "modules": [
+          "telegram_notifier",
+          "telegram_stream_manager"
+        ]
+      }
+    ],
+    "local_import_edges": [
+      {
+        "source": "DTKLPR5",
+        "target": "DTKVID"
+      },
+      {
+        "source": "auto_virtual_camera",
+        "target": "virtual_camera_manager"
+      },
+      {
+        "source": "camera_handler",
+        "target": "DTKLPR5"
+      },
+      {
+        "source": "camera_handler",
+        "target": "DTKVID"
+      },
+      {
+        "source": "camera_handler",
+        "target": "config"
+      },
+      {
+        "source": "camera_handler",
+        "target": "telegram_stream_manager"
+      },
+      {
+        "source": "camera_handler",
+        "target": "virtual_camera_manager"
+      },
+      {
+        "source": "database",
+        "target": "config"
+      },
+      {
+        "source": "gui",
+        "target": "config"
+      },
+      {
+        "source": "gui",
+        "target": "utils"
+      },
+      {
+        "source": "improved_levenshtein",
+        "target": "config"
+      },
+      {
+        "source": "main",
+        "target": "camera_handler"
+      },
+      {
+        "source": "main",
+        "target": "config"
+      },
+      {
+        "source": "main",
+        "target": "database"
+      },
+      {
+        "source": "main",
+        "target": "gui"
+      },
+      {
+        "source": "main",
+        "target": "plate_processor"
+      },
+      {
+        "source": "main",
+        "target": "telegram_notifier"
+      },
+      {
+        "source": "main",
+        "target": "utils"
+      },
+      {
+        "source": "main",
+        "target": "workers"
+      },
+      {
+        "source": "plate_processor",
+        "target": "DTKLPR5"
+      },
+      {
+        "source": "plate_processor",
+        "target": "config"
+      },
+      {
+        "source": "plate_processor",
+        "target": "improved_levenshtein"
+      },
+      {
+        "source": "plate_processor",
+        "target": "utils"
+      },
+      {
+        "source": "telegram_notifier",
+        "target": "config"
+      },
+      {
+        "source": "telegram_stream_manager",
+        "target": "config"
+      },
+      {
+        "source": "utils",
+        "target": "config"
+      },
+      {
+        "source": "workers",
+        "target": "config"
+      }
+    ],
+    "modules": [
+      {
+        "bytes": 41810,
+        "execution_performed": false,
+        "git_blob_sha1": "ff5ca241b43cc0bc773f24733f62498c47bc8e53",
+        "import_roots": [
+          "DTKVID",
+          "PIL",
+          "ctypes",
+          "enum",
+          "numpy",
+          "platform"
+        ],
+        "lines": 1011,
+        "module": "DTKLPR5",
+        "parse_status": "pass",
+        "path": "DTKLPR5.py",
+        "sha256": "3c57c9af92ec34972ac793b6da7a26a9205b2bb74b608597e4b7fa4c54a1562a",
+        "top_level_classes": [
+          "BURN_POS",
+          "PLATE_TYPE",
+          "MOVING_DIRECTION",
+          "DTKLPRLibrary",
+          "LPRParams",
+          "LicensePlateSymbol",
+          "LicensePlate",
+          "LPREngine"
+        ],
+        "top_level_functions": []
+      },
+      {
+        "bytes": 8633,
+        "execution_performed": false,
+        "git_blob_sha1": "b374a3fc21631da95cda0ce933cb4fea95a226ef",
+        "import_roots": [
+          "PIL",
+          "ctypes",
+          "enum",
+          "numpy",
+          "platform"
+        ],
+        "lines": 218,
+        "module": "DTKVID",
+        "parse_status": "pass",
+        "path": "DTKVID.py",
+        "sha256": "cf0b2c6b1592ab5bf53cd99e4b01b501acc6d6b6d1d3fe8fccff6dcc773a103f",
+        "top_level_classes": [
+          "PIXFMT",
+          "ERR_CAPTURE",
+          "DTKVIDLibrary",
+          "VideoCapture",
+          "VideoFrame"
+        ],
+        "top_level_functions": []
+      },
+      {
+        "bytes": 10319,
+        "execution_performed": false,
+        "git_blob_sha1": "95a8e0c723d14cf7dfbe589c6e6019e30f696508",
+        "import_roots": [
+          "PIL",
+          "numpy",
+          "threading",
+          "virtual_camera_manager"
+        ],
+        "lines": 221,
+        "module": "auto_virtual_camera",
+        "parse_status": "pass",
+        "path": "auto_virtual_camera.py",
+        "sha256": "963838db219d9b14a09593d82a25f3f28d524ec08d94fee9111d99496cf0c5e3",
+        "top_level_classes": [
+          "AutoVirtualCamera",
+          "EnhancedCameraWrapper"
+        ],
+        "top_level_functions": []
+      },
+      {
+        "bytes": 21060,
+        "execution_performed": false,
+        "git_blob_sha1": "72a5f665e0246aa76b82938d00f41650cf322d79",
+        "import_roots": [
+          "DTKLPR5",
+          "DTKVID",
+          "PIL",
+          "config",
+          "telegram_stream_manager",
+          "threading",
+          "time",
+          "virtual_camera_manager"
+        ],
+        "lines": 554,
+        "module": "camera_handler",
+        "parse_status": "pass",
+        "path": "camera_handler.py",
+        "sha256": "be3a27fbe2cc636d122e691d4dfce0b6bb3f6346c4192a407c0bdf14776aabf2",
+        "top_level_classes": [
+          "CameraHandler"
+        ],
+        "top_level_functions": []
+      },
+      {
+        "bytes": 5964,
+        "execution_performed": false,
+        "git_blob_sha1": "02775352ef692701010d4fdc1545ec72197763cf",
+        "import_roots": [
+          "dotenv",
+          "json",
+          "logging",
+          "os",
+          "pathlib"
+        ],
+        "lines": 179,
+        "module": "config",
+        "parse_status": "pass",
+        "path": "config.py",
+        "sha256": "3f0d43ca47ec3ff72fb38a0eb1e0c0c2137568154fc0f79bf3e6e1d8a947047c",
+        "top_level_classes": [],
+        "top_level_functions": [
+          "save_config_to_file",
+          "load_config_from_file",
+          "get_config_value",
+          "set_config_value",
+          "validate_config"
+        ]
+      },
+      {
+        "bytes": 39524,
+        "execution_performed": false,
+        "git_blob_sha1": "1b6ac2f4f498cac6a8e74d24122f09b5edc285b4",
+        "import_roots": [
+          "config",
+          "datetime",
+          "json",
+          "sqlite3",
+          "threading"
+        ],
+        "lines": 933,
+        "module": "database",
+        "parse_status": "pass",
+        "path": "database.py",
+        "sha256": "7543f8f213b276c35a8df416bdd5eea893b2d689169da708550133ec3eb88738",
+        "top_level_classes": [
+          "DatabaseManager"
+        ],
+        "top_level_functions": []
+      },
+      {
+        "bytes": 68752,
+        "execution_performed": false,
+        "git_blob_sha1": "2952401ce41557bf213bd071d4eae9ac52a62ce5",
+        "import_roots": [
+          "PIL",
+          "config",
+          "datetime",
+          "json",
+          "os",
+          "threading",
+          "tkinter",
+          "utils"
+        ],
+        "lines": 1652,
+        "module": "gui",
+        "parse_status": "pass",
+        "path": "gui.py",
+        "sha256": "7fe2196b6ce1a94dee04a1f3cc9686a5523ca06da7dc84cacf5f034393e7f969",
+        "top_level_classes": [
+          "LPRMainWindow",
+          "PlateDetailsDialog",
+          "SettingsDialog",
+          "BlacklistAddDialog",
+          "BlacklistManagerDialog",
+          "StatisticsDialog",
+          "ExportDialog",
+          "PlateImagesDialog"
+        ],
+        "top_level_functions": []
+      },
+      {
+        "bytes": 7056,
+        "execution_performed": false,
+        "git_blob_sha1": "d087cacf485c6b191dac14b2cde736be901e15f8",
+        "import_roots": [
+          "config",
+          "re"
+        ],
+        "lines": 254,
+        "module": "improved_levenshtein",
+        "parse_status": "pass",
+        "path": "improved_levenshtein.py",
+        "sha256": "09848130ee76e0e6170290d50530f4afcae4ac5aca2bfb2d22236bc24a048710",
+        "top_level_classes": [],
+        "top_level_functions": [
+          "normalize_plate",
+          "improved_levenshtein",
+          "are_similar_chars",
+          "calculate_similarity_score",
+          "find_best_match",
+          "group_similar_plates",
+          "get_adaptive_threshold",
+          "merge_plate_variants"
+        ]
+      },
+      {
+        "bytes": 16927,
+        "execution_performed": false,
+        "git_blob_sha1": "c2c9c6e3c76fd03263d67b1a4df2d786e4bebf9f",
+        "import_roots": [
+          "PIL",
+          "atexit",
+          "camera_handler",
+          "config",
+          "database",
+          "datetime",
+          "gui",
+          "os",
+          "plate_processor",
+          "signal",
+          "sys",
+          "telegram_notifier",
+          "threading",
+          "tkinter",
+          "utils",
+          "workers"
+        ],
+        "lines": 493,
+        "module": "main",
+        "parse_status": "pass",
+        "path": "main.py",
+        "sha256": "304133b43e261bb4f432fdaa86650846d075a6260dd1c815b38163cbb4588215",
+        "top_level_classes": [
+          "LPRApplication"
+        ],
+        "top_level_functions": [
+          "main"
+        ]
+      },
+      {
+        "bytes": 21134,
+        "execution_performed": false,
+        "git_blob_sha1": "4ecf3e079e0c0fa74a1c59cf652a2c6e17780194",
+        "import_roots": [
+          "DTKLPR5",
+          "PIL",
+          "config",
+          "datetime",
+          "improved_levenshtein",
+          "pathlib",
+          "re",
+          "threading",
+          "utils"
+        ],
+        "lines": 570,
+        "module": "plate_processor",
+        "parse_status": "pass",
+        "path": "plate_processor.py",
+        "sha256": "bf6ad8d7325f569baa6f219bc18c81c1716ff5d93d921fe679df7fa483b62a93",
+        "top_level_classes": [
+          "PlateProcessor"
+        ],
+        "top_level_functions": []
+      },
+      {
+        "bytes": 15584,
+        "execution_performed": false,
+        "git_blob_sha1": "38d8772b3e6651bf6c39553aa03f2cbea083b002",
+        "import_roots": [
+          "PIL",
+          "config",
+          "io",
+          "os",
+          "queue",
+          "requests",
+          "time"
+        ],
+        "lines": 408,
+        "module": "telegram_notifier",
+        "parse_status": "pass",
+        "path": "telegram_notifier.py",
+        "sha256": "a9f6bc8ff3149610f4d1ba25a0afe9fc96d880ec1792fb23172fbc920e8b5ffc",
+        "top_level_classes": [
+          "TelegramNotifier"
+        ],
+        "top_level_functions": []
+      },
+      {
+        "bytes": 15508,
+        "execution_performed": false,
+        "git_blob_sha1": "32b80fee22dea92f0edfc33038e92ad53f6046b1",
+        "import_roots": [
+          "asyncio",
+          "config",
+          "pyrogram",
+          "pytgcalls",
+          "threading",
+          "typing"
+        ],
+        "lines": 389,
+        "module": "telegram_stream_manager",
+        "parse_status": "pass",
+        "path": "telegram_stream_manager.py",
+        "sha256": "c3c01f9ca8bf18250b3c971e2a274c4f9c85d5d148cea939c11357e1003699ab",
+        "top_level_classes": [
+          "GroupcallForbidden",
+          "TelegramStreamManager"
+        ],
+        "top_level_functions": []
+      },
+      {
+        "bytes": 13217,
+        "execution_performed": false,
+        "git_blob_sha1": "2590dd9d5361a7d44bfb664e49181b811cf4454e",
+        "import_roots": [
+          "PIL",
+          "config",
+          "csv",
+          "datetime",
+          "json",
+          "pathlib"
+        ],
+        "lines": 452,
+        "module": "utils",
+        "parse_status": "pass",
+        "path": "utils.py",
+        "sha256": "33b292304568a8923d675230b6e70265c7b60de9190f9663ecc0f2b36c76f655",
+        "top_level_classes": [],
+        "top_level_functions": [
+          "levenshtein_distance",
+          "preprocess_image",
+          "format_duration",
+          "format_timestamp",
+          "calculate_time_difference",
+          "export_to_csv",
+          "export_to_json",
+          "validate_plate_format",
+          "create_directory_structure",
+          "get_file_size_mb",
+          "cleanup_old_files",
+          "generate_report_filename",
+          "calculate_statistics",
+          "normalize_plate_text",
+          "is_similar_plate",
+          "get_system_info",
+          "validate_config"
+        ]
+      },
+      {
+        "bytes": 9603,
+        "execution_performed": false,
+        "git_blob_sha1": "1dabc16d03c76eac58564a196fde5b001cef3176",
+        "import_roots": [
+          "PIL",
+          "cv2",
+          "numpy",
+          "pyvirtualcam",
+          "queue",
+          "threading",
+          "time"
+        ],
+        "lines": 234,
+        "module": "virtual_camera_manager",
+        "parse_status": "pass",
+        "path": "virtual_camera_manager.py",
+        "sha256": "f5f8d60153ad767f4933bc3b084c876743f01fbf4750758f087f28a1aea4e8ea",
+        "top_level_classes": [
+          "VirtualCameraManager",
+          "CameraWithVirtualOutput"
+        ],
+        "top_level_functions": []
+      },
+      {
+        "bytes": 16099,
+        "execution_performed": false,
+        "git_blob_sha1": "6921d5cb1c16f64ceadaf209f0f036b27411c47f",
+        "import_roots": [
+          "config",
+          "datetime",
+          "queue",
+          "threading",
+          "time"
+        ],
+        "lines": 441,
+        "module": "workers",
+        "parse_status": "pass",
+        "path": "workers.py",
+        "sha256": "dd10be202ec4cfdc946a40df535618fdf58e7351d143759285ae1a663ab46ba0",
+        "top_level_classes": [
+          "WorkerManager"
+        ],
+        "top_level_functions": []
+      }
+    ],
+    "nonlocal_import_roots": [
+      "PIL",
+      "asyncio",
+      "atexit",
+      "csv",
+      "ctypes",
+      "cv2",
+      "datetime",
+      "dotenv",
+      "enum",
+      "io",
+      "json",
+      "logging",
+      "numpy",
+      "os",
+      "pathlib",
+      "platform",
+      "pyrogram",
+      "pytgcalls",
+      "pyvirtualcam",
+      "queue",
+      "re",
+      "requests",
+      "signal",
+      "sqlite3",
+      "sys",
+      "threading",
+      "time",
+      "tkinter",
+      "typing"
+    ],
+    "top_level_classes": 33,
+    "top_level_functions": 31,
+    "total_bytes": 311190,
+    "total_lines": 8009
+  },
+  "release_gate": [
+    {
+      "evidence": "8 declared keys and zero non-empty values",
+      "id": "current-env-template",
+      "state": "pass"
+    },
+    {
+      "evidence": "Two provider alerts require revocation and account review outside Git",
+      "id": "historical-telegram-credentials",
+      "issue": "https://github.com/omar07ibrahim/ssssd/issues/2",
+      "state": "human_required"
+    },
+    {
+      "evidence": "Rights to publish and redistribute the native DTK integration are unconfirmed",
+      "id": "dtk-publication-rights",
+      "issue": "https://github.com/omar07ibrahim/ssssd/issues/2",
+      "state": "human_required"
+    },
+    {
+      "evidence": "No license may be selected until source provenance and rights are established",
+      "id": "repository-license",
+      "issue": "https://github.com/omar07ibrahim/ssssd/issues/2",
+      "state": "human_required"
+    },
+    {
+      "evidence": "No requirements or pyproject dependency manifest is retained",
+      "id": "dependency-lock",
+      "state": "blocked"
+    },
+    {
+      "evidence": "No native library, camera, GUI, database, or Telegram path was executed",
+      "id": "runtime-evidence",
+      "state": "missing"
+    },
+    {
+      "evidence": "No release or promotional capture before credentials, rights, licensing, and synthetic-fixture gates close",
+      "id": "public-release",
+      "issue": "https://github.com/omar07ibrahim/ssssd/issues/2",
+      "state": "blocked"
+    }
+  ],
+  "repository_contract": {
+    "dependency_manifest_present": false,
+    "license_file_present": false,
+    "promotional_runtime_evidence_published": false
+  },
+  "schema": "ssssd.quarantine_snapshot.v1",
+  "scope": {
+    "application_executed": false,
+    "gui_opened": false,
+    "kind": "static-source-metadata audit",
+    "native_library_loaded": false,
+    "network_used": false,
+    "python_modules": 15,
+    "source_values_emitted": false,
+    "telegram_contacted": false
+  }
+}

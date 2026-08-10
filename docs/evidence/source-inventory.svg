@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+<title id="title">Quarantined desktop source inventory</title>
+<desc id="desc">Exact static counts and hashes for the retained Python and empty environment-template surfaces.</desc>
+<style>
+  .bg { fill: #07111f; }
+  .panel { fill: #0f2035; stroke: #315270; stroke-width: 2; }
+  .panel2 { fill: #122941; stroke: #41698c; stroke-width: 2; }
+  .title { fill: #f4f8ff; font: 700 34px ui-monospace, SFMono-Regular, Consolas, monospace; }
+  .sub { fill: #9ec8e8; font: 18px ui-monospace, SFMono-Regular, Consolas, monospace; }
+  .head { fill: #f4f8ff; font: 700 21px ui-monospace, SFMono-Regular, Consolas, monospace; }
+  .body { fill: #d4e5f4; font: 17px ui-monospace, SFMono-Regular, Consolas, monospace; }
+  .small { fill: #9ec8e8; font: 15px ui-monospace, SFMono-Regular, Consolas, monospace; }
+  .good { fill: #65d6a6; font: 700 17px ui-monospace, SFMono-Regular, Consolas, monospace; }
+  .warn { fill: #ffcc66; font: 700 17px ui-monospace, SFMono-Regular, Consolas, monospace; }
+  .bad { fill: #ff7b86; font: 700 17px ui-monospace, SFMono-Regular, Consolas, monospace; }
+  .line { stroke: #77b6dd; stroke-width: 3; fill: none; }
+</style>
+<rect class="bg" width="1280" height="720"/>
+<text x="60" y="62" class="title" text-anchor="start">SSSSD / SOURCE INVENTORY</text>
+<text x="60" y="94" class="sub" text-anchor="start">Exact current metadata; application code and credential values are never displayed.</text>
+<rect x="60" y="135" width="260" height="120" rx="18" class="panel"/>
+<text x="82" y="175" class="small" text-anchor="start">PYTHON MODULES</text>
+<text x="82" y="223" class="head" text-anchor="start">15</text>
+<rect x="355" y="135" width="260" height="120" rx="18" class="panel"/>
+<text x="377" y="175" class="small" text-anchor="start">TOTAL LINES</text>
+<text x="377" y="223" class="head" text-anchor="start">8,009</text>
+<rect x="650" y="135" width="260" height="120" rx="18" class="panel"/>
+<text x="672" y="175" class="small" text-anchor="start">LOCAL IMPORT EDGES</text>
+<text x="672" y="223" class="head" text-anchor="start">27</text>
+<rect x="945" y="135" width="260" height="120" rx="18" class="panel"/>
+<text x="967" y="175" class="small" text-anchor="start">EMPTY ENV KEYS</text>
+<text x="967" y="223" class="head" text-anchor="start">8/8</text>
+<rect x="60" y="300" width="720" height="280" rx="18" class="panel2"/>
+<text x="88" y="342" class="head" text-anchor="start">LARGEST RETAINED MODULES</text>
+<text x="92" y="388" class="body" text-anchor="start">gui.py</text>
+<text x="735" y="388" class="small" text-anchor="end">1,652 lines · 7fe2196b6ce1…</text>
+<text x="92" y="426" class="body" text-anchor="start">DTKLPR5.py</text>
+<text x="735" y="426" class="small" text-anchor="end">1,011 lines · 3c57c9af92ec…</text>
+<text x="92" y="464" class="body" text-anchor="start">database.py</text>
+<text x="735" y="464" class="small" text-anchor="end">933 lines · 7543f8f213b2…</text>
+<text x="92" y="502" class="body" text-anchor="start">plate_processor.py</text>
+<text x="735" y="502" class="small" text-anchor="end">570 lines · bf6ad8d7325f…</text>
+<text x="92" y="540" class="body" text-anchor="start">camera_handler.py</text>
+<text x="735" y="540" class="small" text-anchor="end">554 lines · be3a27fbe2cc…</text>
+<rect x="820" y="300" width="400" height="280" rx="18" class="panel2"/>
+<text x="848" y="342" class="head" text-anchor="start">STATIC SCOPE</text>
+<text x="848" y="388" class="body" text-anchor="start">33 top-level classes</text>
+<text x="848" y="426" class="body" text-anchor="start">31 top-level functions</text>
+<text x="848" y="464" class="warn" text-anchor="start">native load: no</text>
+<text x="848" y="502" class="warn" text-anchor="start">GUI / Telegram: no</text>
+<text x="848" y="540" class="good" text-anchor="start">source values emitted: 0</text>
+<text x="640" y="650" class="warn" text-anchor="middle">STATIC INVENTORY ≠ RUNTIME VALIDATION</text>
+<text x="640" y="682" class="small" text-anchor="middle">Reproduce: python3 tools/audit_quarantine.py --check</text>
+</svg>

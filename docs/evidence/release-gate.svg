@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+<title id="title">Quarantined snapshot release gate</title>
+<desc id="desc">Current static evidence and unresolved credential, rights, license, dependency, runtime, and release gates.</desc>
+<style>
+  .bg { fill: #07111f; }
+  .panel { fill: #0f2035; stroke: #315270; stroke-width: 2; }
+  .panel2 { fill: #122941; stroke: #41698c; stroke-width: 2; }
+  .title { fill: #f4f8ff; font: 700 34px ui-monospace, SFMono-Regular, Consolas, monospace; }
+  .sub { fill: #9ec8e8; font: 18px ui-monospace, SFMono-Regular, Consolas, monospace; }
+  .head { fill: #f4f8ff; font: 700 21px ui-monospace, SFMono-Regular, Consolas, monospace; }
+  .body { fill: #d4e5f4; font: 17px ui-monospace, SFMono-Regular, Consolas, monospace; }
+  .small { fill: #9ec8e8; font: 15px ui-monospace, SFMono-Regular, Consolas, monospace; }
+  .good { fill: #65d6a6; font: 700 17px ui-monospace, SFMono-Regular, Consolas, monospace; }
+  .warn { fill: #ffcc66; font: 700 17px ui-monospace, SFMono-Regular, Consolas, monospace; }
+  .bad { fill: #ff7b86; font: 700 17px ui-monospace, SFMono-Regular, Consolas, monospace; }
+  .line { stroke: #77b6dd; stroke-width: 3; fill: none; }
+</style>
+<rect class="bg" width="1280" height="720"/>
+<text x="60" y="62" class="title" text-anchor="start">SSSSD / RELEASE GATE</text>
+<text x="60" y="94" class="sub" text-anchor="start">No screenshot, demo, or release can close a provider or rights decision.</text>
+<rect x="60" y="135" width="1160" height="67" rx="18" class="panel2"/>
+<text x="88" y="163" class="head" text-anchor="start">current-env-template</text>
+<text x="1190" y="163" class="good" text-anchor="end">PASS</text>
+<text x="88" y="188" class="small" text-anchor="start">8 declared keys and zero non-empty values</text>
+<rect x="60" y="210" width="1160" height="67" rx="18" class="panel2"/>
+<text x="88" y="238" class="head" text-anchor="start">historical-telegram-credentials</text>
+<text x="1190" y="238" class="warn" text-anchor="end">HUMAN_REQUIRED</text>
+<text x="88" y="263" class="small" text-anchor="start">Two provider alerts require revocation and account review outside Git</text>
+<rect x="60" y="285" width="1160" height="67" rx="18" class="panel2"/>
+<text x="88" y="313" class="head" text-anchor="start">dtk-publication-rights</text>
+<text x="1190" y="313" class="warn" text-anchor="end">HUMAN_REQUIRED</text>
+<text x="88" y="338" class="small" text-anchor="start">Rights to publish and redistribute the native DTK integration are unconfirmed</text>
+<rect x="60" y="360" width="1160" height="67" rx="18" class="panel2"/>
+<text x="88" y="388" class="head" text-anchor="start">repository-license</text>
+<text x="1190" y="388" class="warn" text-anchor="end">HUMAN_REQUIRED</text>
+<text x="88" y="413" class="small" text-anchor="start">No license may be selected until source provenance and rights are established</text>
+<rect x="60" y="435" width="1160" height="67" rx="18" class="panel2"/>
+<text x="88" y="463" class="head" text-anchor="start">dependency-lock</text>
+<text x="1190" y="463" class="bad" text-anchor="end">BLOCKED</text>
+<text x="88" y="488" class="small" text-anchor="start">No requirements or pyproject dependency manifest is retained</text>
+<rect x="60" y="510" width="1160" height="67" rx="18" class="panel2"/>
+<text x="88" y="538" class="head" text-anchor="start">runtime-evidence</text>
+<text x="1190" y="538" class="bad" text-anchor="end">MISSING</text>
+<text x="88" y="563" class="small" text-anchor="start">No native library, camera, GUI, database, or Telegram path was executed</text>
+<rect x="60" y="585" width="1160" height="67" rx="18" class="panel2"/>
+<text x="88" y="613" class="head" text-anchor="start">public-release</text>
+<text x="1190" y="613" class="bad" text-anchor="end">BLOCKED</text>
+<text x="88" y="638" class="small" text-anchor="start">No release or promotional capture before credentials, rights, licensing, and synthetic-fixture gates close</text>
+<text x="640" y="685" class="bad" text-anchor="middle">PUBLIC RELEASE: BLOCKED · owner actions tracked in issue #2</text>
+</svg>

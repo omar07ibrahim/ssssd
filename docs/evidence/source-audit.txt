@@ -1,0 +1,17 @@
+$ python3 tools/audit_quarantine.py --check
+PASS: committed quarantine evidence matches exact current source bytes
+python_modules=15
+python_lines=8009
+top_level_classes=33
+top_level_functions=31
+local_import_edges=27
+nonlocal_import_roots=29
+environment_keys=8
+environment_nonempty_values=0
+source_values_emitted=0
+application_executed=0
+native_library_loaded=0
+dependency_manifest_present=0
+license_file_present=0
+release_status=BLOCKED
+owner_actions=https://github.com/omar07ibrahim/ssssd/issues/2

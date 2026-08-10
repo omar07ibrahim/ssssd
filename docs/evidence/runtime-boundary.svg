@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+<title id="title">Unexecuted runtime integration boundary</title>
+<desc id="desc">Static application path from camera inputs through proprietary native wrappers, processing, local state, GUI, and optional Telegram integration.</desc>
+<style>
+  .bg { fill: #07111f; }
+  .panel { fill: #0f2035; stroke: #315270; stroke-width: 2; }
+  .panel2 { fill: #122941; stroke: #41698c; stroke-width: 2; }
+  .title { fill: #f4f8ff; font: 700 34px ui-monospace, SFMono-Regular, Consolas, monospace; }
+  .sub { fill: #9ec8e8; font: 18px ui-monospace, SFMono-Regular, Consolas, monospace; }
+  .head { fill: #f4f8ff; font: 700 21px ui-monospace, SFMono-Regular, Consolas, monospace; }
+  .body { fill: #d4e5f4; font: 17px ui-monospace, SFMono-Regular, Consolas, monospace; }
+  .small { fill: #9ec8e8; font: 15px ui-monospace, SFMono-Regular, Consolas, monospace; }
+  .good { fill: #65d6a6; font: 700 17px ui-monospace, SFMono-Regular, Consolas, monospace; }
+  .warn { fill: #ffcc66; font: 700 17px ui-monospace, SFMono-Regular, Consolas, monospace; }
+  .bad { fill: #ff7b86; font: 700 17px ui-monospace, SFMono-Regular, Consolas, monospace; }
+  .line { stroke: #77b6dd; stroke-width: 3; fill: none; }
+</style>
+<rect class="bg" width="1280" height="720"/>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#77b6dd"/></marker></defs>
+<text x="60" y="62" class="title" text-anchor="start">SSSSD / STATIC RUNTIME PATH</text>
+<text x="60" y="94" class="sub" text-anchor="start">Architecture recovered from imports and class surfaces. Nothing was launched.</text>
+<rect x="45" y="180" width="210" height="130" rx="18" class="panel"/>
+<text x="150" y="230" class="head" text-anchor="middle">camera / virtual</text>
+<text x="150" y="268" class="small" text-anchor="middle">external input</text>
+<rect x="295" y="180" width="210" height="130" rx="18" class="panel"/>
+<text x="400" y="230" class="head" text-anchor="middle">DTKVID / DTKLPR5</text>
+<text x="400" y="268" class="small" text-anchor="middle">rights boundary</text>
+<rect x="545" y="180" width="210" height="130" rx="18" class="panel"/>
+<text x="650" y="230" class="head" text-anchor="middle">plate processing</text>
+<text x="650" y="268" class="small" text-anchor="middle">local logic</text>
+<rect x="795" y="180" width="210" height="130" rx="18" class="panel"/>
+<text x="900" y="230" class="head" text-anchor="middle">database + GUI</text>
+<text x="900" y="268" class="small" text-anchor="middle">local state</text>
+<rect x="1045" y="180" width="190" height="130" rx="18" class="panel"/>
+<text x="1140" y="230" class="head" text-anchor="middle">Telegram</text>
+<text x="1140" y="268" class="small" text-anchor="middle">optional external</text>
+<path d="M255 245 L295 245" class="line" marker-end="url(#arrow)"/>
+<path d="M505 245 L545 245" class="line" marker-end="url(#arrow)"/>
+<path d="M755 245 L795 245" class="line" marker-end="url(#arrow)"/>
+<path d="M1005 245 L1045 245" class="line" marker-end="url(#arrow)"/>
+<rect x="95" y="390" width="500" height="190" rx="18" class="panel2"/>
+<text x="125" y="432" class="head" text-anchor="start">RETAINED SOURCE SURFACES</text>
+<text x="125" y="474" class="body" text-anchor="start">capture · recognition · matching</text>
+<text x="125" y="510" class="body" text-anchor="start">SQLite history · Tk GUI · workers</text>
+<text x="125" y="546" class="body" text-anchor="start">bot notifications · group-call stream</text>
+<rect x="685" y="390" width="500" height="190" rx="18" class="panel2"/>
+<text x="715" y="432" class="head" text-anchor="start">NOT ESTABLISHED</text>
+<text x="715" y="474" class="warn" text-anchor="start">DTK availability or redistribution</text>
+<text x="715" y="510" class="warn" text-anchor="start">camera / plate privacy or consent</text>
+<text x="715" y="546" class="warn" text-anchor="start">runtime correctness or security</text>
+<text x="640" y="655" class="good" text-anchor="middle">No native load · no camera · no database · no network</text>
+</svg>
